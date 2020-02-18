@@ -11,15 +11,15 @@
  ## 언어 및 라이브러리, 툴
 
 
-* ##### 언어 : Kotlin
-* ##### 아키텍쳐 패턴 : AAC MVVM
-* ##### 비동기 : Coroutine
-* ##### DI : Koin 
-* ##### Android Jetpack
-    * ###### Foundation : Android KTX, Appcompat
-    * ###### Architecture : Data Binding , Lifecycles, Paging, LiveData, Navigation, Room, ViewModel
-    * ###### UI : Fragment, Layout
-* ##### ETC : Glide, Firestore, Firestorage , TedPermission, Timber
+- ##### 언어 : Kotlin
+- ##### 아키텍쳐 패턴 : AAC MVVM
+- ##### 비동기 : Coroutine
+- ##### DI : Koin 
+- ##### Android Jetpack
+    - ###### Foundation : Android KTX, Appcompat
+    - ###### Architecture : Data Binding , Lifecycles, Paging, LiveData, Navigation, Room, ViewModel
+    - ###### UI : Fragment, Layout
+- ##### ETC : Glide, Firestore, Firestorage , TedPermission, Timber
  ## 안드로이드 버전
 
     androidBuildToolsVersion = "29.0.2"
