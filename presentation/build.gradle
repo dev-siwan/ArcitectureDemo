@@ -17,6 +17,14 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
     }
 
     buildTypes {
@@ -41,6 +49,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
@@ -50,6 +61,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation presentationDependencies.kotlin
     implementation presentationDependencies.appcompat
+    implementation presentationDependencies.coreKtx
     implementation presentationDependencies.meterialDesign
     implementation presentationDependencies.costraintLayout
     implementation presentationDependencies.recyclerview
