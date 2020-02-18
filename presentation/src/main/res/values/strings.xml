@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ArcitectureDemo</string>
+
+    <string name="no_feed_list_text">만들어진 피드가 없습니다</string>
+    <string name="create_feed_text">피드만들기</string>
+    <string name="feed_text">피드리스트</string>
+
+    <string name="feed_title_hint">제목을 입력해주세요</string>
+    <string name="feed_content_hint">내용을 입력해주세요</string>
+
+    <string name="make_feed_error">피드생성 오류로 문제가 생겼습니다.</string>
+    <string name="make_feed_image_error">이미지 오류로 문제가 생겼습니다.</string>
+    <string name="make_feed_success">피드생성에 성공하였습니다.</string>
+    <string name="update_feed_success">피드업데이트에 성공하였습니다.</string>
+    <string name="make_update_feed_error">피드업데이트 실패하였습니다</string>
+    <string name="make_get_feed_error">피드를 들고오는데 실패하였습니다</string>
+
+    <string name="make_feed_empty_title">제목을 입력해주세요.</string>
+    <string name="make_feed_empty_content">내용을 입력해주세요.</string>
+
+    <string name="delete_feed_error">피드삭제 문제가 생겼습니다.</string>
+    <string name="delete_feed_success">피드삭제 성공하였습니다.</string>
+
+    <string name="app_finish_message">앱을 종료합니다.</string>
+    <string name="positive_text">확인</string>
+    <string name="negative_text">취소</string>
+
+</resources>

@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def cacheDependencies = rootProject.ext.cacheDependencies
+    def cacheTestDependencies = rootProject.ext.chacheTestDependencies
+
+    implementation cacheDependencies.kotlin
+    implementation cacheDependencies.coroutineAndroid
+    implementation cacheDependencies.coreKtx
+    implementation cacheDependencies.roomRuntime
+    kapt cacheDependencies.roomKapt
+    implementation cacheDependencies.roomKtx
+    implementation cacheDependencies.roomGuava
+    implementation cacheDependencies.koinCore
+    implementation cacheDependencies.koinScope
+    implementation cacheDependencies.koinExt
+    implementation cacheDependencies.pagingRuntime
+
+    testImplementation cacheTestDependencies.junit
+    testImplementation cacheTestDependencies.kotlinJUnit
+    androidTestImplementation cacheTestDependencies.espressoCore
+    androidTestImplementation cacheTestDependencies.androidJunit
+    testImplementation cacheTestDependencies.roomTest
+    testImplementation cacheTestDependencies.koinTest
+
+    implementation project(path: ':base')
+    implementation project(path: ':data')
+}

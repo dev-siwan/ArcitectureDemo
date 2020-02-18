@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="beforePhotoMenu">
+        <item>앨범</item>
+        <item>카메라</item>
+    </string-array>
+    <string-array name="afterPhotoMenu">
+        <item>앨범</item>
+        <item>카메라</item>
+        <item>이미지 삭제</item>
+    </string-array>
+    <string-array name="feedMenu">
+        <item>수정</item>
+        <item>삭제</item>
+    </string-array>
+</resources>

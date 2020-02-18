@@ -1,0 +1,2 @@
+include ':app', ':base', ':domain', ':cache', ':remote', ':data', ':presentation'
+rootProject.name='ArcitectureDemo'

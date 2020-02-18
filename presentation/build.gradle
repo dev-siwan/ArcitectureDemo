@@ -1,0 +1,96 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    configurations.all {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation presentationDependencies.kotlin
+    implementation presentationDependencies.appcompat
+    implementation presentationDependencies.meterialDesign
+    implementation presentationDependencies.costraintLayout
+    implementation presentationDependencies.recyclerview
+    implementation presentationDependencies.lifeCycleExtensions
+    implementation presentationDependencies.viewModelKtx
+    implementation presentationDependencies.gms_play_service
+    implementation presentationDependencies.rxAndroid
+    implementation presentationDependencies.rxJava
+    implementation presentationDependencies.koinCore
+    implementation presentationDependencies.koinScope
+    implementation presentationDependencies.koinExt
+    implementation presentationDependencies.timber
+    implementation presentationDependencies.coroutineAndroid
+    implementation presentationDependencies.livedataKTX
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt presentationDependencies.roomKapt
+    implementation presentationDependencies.roomKtx
+    implementation presentationDependencies.roomGuava
+    implementation presentationDependencies.fragmentNav
+    implementation presentationDependencies.uiNav
+    implementation presentationDependencies.fragment
+    implementation presentationDependencies.fragmentKtx
+    implementation presentationDependencies.pagingRuntime
+    implementation presentationDependencies.supportDesign
+    implementation presentationDependencies.exifInterface
+    api presentationDependencies.cropper
+    implementation presentationDependencies.tedPermission
+    implementation presentationDependencies.firestore
+    implementation presentationDependencies.glide
+    annotationProcessor presentationDependencies.glideAnnotation
+
+
+    testImplementation presentationTestDependencies.junit
+    testImplementation presentationTestDependencies.kotlinJUnit
+    androidTestImplementation presentationTestDependencies.espressoCore
+    androidTestImplementation presentationTestDependencies.androidJunit
+    testImplementation presentationTestDependencies.roomTest
+    testImplementation presentationTestDependencies.koinTest
+    testImplementation presentationTestDependencies.fragmentTest
+    testImplementation presentationTestDependencies.pagingTest
+
+    implementation project(path: ':domain')
+    implementation project(path: ':base')
+}

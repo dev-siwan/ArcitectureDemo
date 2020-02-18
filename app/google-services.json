@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1012784277881",
+    "firebase_url": "https://architecturedemo-e03e1.firebaseio.com",
+    "project_id": "architecturedemo-e03e1",
+    "storage_bucket": "architecturedemo-e03e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012784277881:android:0f40befdd1875b07a627a8",
+        "android_client_info": {
+          "package_name": "com.ksw.arcitecturedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012784277881-619pcv8bqqlisi9g6dp66df96fn17qa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCicKQqk-tB3ilARr8nvlP_i0gfU01q3Xc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012784277881-619pcv8bqqlisi9g6dp66df96fn17qa1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

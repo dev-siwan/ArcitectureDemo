@@ -1,0 +1,232 @@
+ext{
+    /**android version**/
+    androidBuildToolsVersion = "29.0.2"
+    androidMinSdkVersion = 23
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+
+    /**lib version**/
+    //Kotlin
+    kotlin_version = '1.3.61'
+    //constraint
+    constraint_layout = '1.1.2'
+    //fragment
+    fragment_version = '1.2.0'
+    //recycler
+    recyclerview_version = '1.1.0'
+    //koin[Dependency Inject]
+    koin_version = '2.0.1'
+    //room [Local Database]
+    room_version = '2.2.3'
+    //material
+    material_version = '1.2.0-alpha04'
+    //ktx
+    viewmodel_ktx = '2.2.0'
+    core_ktx_version = '1.3.0-alpha01'
+    //lifeCycle
+    livedata_ktx_version='2.2.0'
+    lifecycle_extensions_version='2.2.0'
+    //rx
+    rxjava_version = '2.2.16'
+    rxandroid_version = '2.1.1'
+    //glide
+    glide_version = '4.10.0'
+    //gms
+    gms_play_service_version = '17.1.0'
+    //appcompat
+    appcompat_version = '1.1.0'
+    //timber[Debug log]
+    timber_version ='4.7.1'
+    //coroutine[async]
+    android_coroutine_version='1.3.0'
+    play_service_croutine_version='1.1.1'
+    //room
+    room_version = '2.2.1'
+    //fire store
+    firestore_version ='21.3.0'
+    //fire storage
+    firestorage_version='19.1.0'
+    //navigation component
+    nav_version = "2.2.0"
+    //paging
+    paging_version="2.1.1"
+    //support design
+    support_design_version="28.0.0"
+    //Crop
+    crop_version="2.8.0"
+    //TedPermission
+    ted_permission_version ="2.2.2"
+    //Exif interface
+    exifinterface_version="1.1.0"
+    /**testing**/
+    junit_version='4.1.2'
+    android_junit_version='1.1.1'
+    espresso_version='3.2.0'
+
+
+    appDependencies = [
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appcompat          : "androidx.appcompat:appcompat:$appcompat_version",
+            coreKtx            : "androidx.core:core-ktx:$core_ktx_version",
+            lifeCycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycle_extensions_version",
+            viewModelKtx       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_ktx",
+            recyclerview       : "androidx.recyclerview:recyclerview:$recyclerview_version",
+            meterialDesign     : "com.google.android.material:material:$material_version",
+            costraintLayout    : "androidx.constraintlayout:constraintlayout:$constraint_layout",
+            gms_play_service   : "com.google.android.gms:play-services-base:$gms_play_service_version",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:$rxandroid_version",
+            rxJava             : "io.reactivex.rxjava2:rxjava:$rxjava_version",
+            koinCore           : "org.koin:koin-core:$koin_version",
+            koinScope          : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt            : "org.koin:koin-androidx-ext:$koin_version",
+            timber             : "com.jakewharton.timber:timber:$timber_version",
+            coroutineAndroid   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            livedataKTX        : "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_ktx_version",
+            roomRuntime        : "androidx.room:room-runtime:$room_version",
+            roomKapt           : "androidx.room:room-compiler:$room_version",
+            roomKtx            : "androidx.room:room-ktx:$room_version",
+            roomGuava          : "androidx.room:room-guava:$room_version"
+    ]
+
+    appTestDependencies = [
+            junit       : "junit:junit:${junit_version}",
+            kotlinJUnit : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            androidJunit: "androidx.test.ext:junit:$android_junit_version",
+            espressoCore: "androidx.test.espresso:espresso-core:$espresso_version",
+            roomTest    : "androidx.room:room-testing:$room_version",
+            koinTest    : "org.koin:koin-test:$koin_version"
+    ]
+
+    presentationDependencies = [
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appcompat          : "androidx.appcompat:appcompat:$appcompat_version",
+            coreKtx            : "androidx.core:core-ktx:$core_ktx_version",
+            lifeCycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycle_extensions_version",
+            viewModelKtx       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_ktx",
+            recyclerview       : "androidx.recyclerview:recyclerview:$recyclerview_version",
+            meterialDesign     : "com.google.android.material:material:$material_version",
+            costraintLayout    : "androidx.constraintlayout:constraintlayout:$constraint_layout",
+            gms_play_service   : "com.google.android.gms:play-services-base:$gms_play_service_version",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:$rxandroid_version",
+            rxJava             : "io.reactivex.rxjava2:rxjava:$rxjava_version",
+            koinCore           : "org.koin:koin-core:$koin_version",
+            koinScope          : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt            : "org.koin:koin-androidx-ext:$koin_version",
+            timber             : "com.jakewharton.timber:timber:$timber_version",
+            coroutineAndroid   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            livedataKTX        : "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_ktx_version",
+            roomRuntime        : "androidx.room:room-runtime:$room_version",
+            roomKapt           : "androidx.room:room-compiler:$room_version",
+            roomKtx            : "androidx.room:room-ktx:$room_version",
+            roomGuava          : "androidx.room:room-guava:$room_version",
+            fragmentNav        : "androidx.navigation:navigation-fragment-ktx:$nav_version",
+            uiNav              : "androidx.navigation:navigation-ui-ktx:$nav_version",
+            fragment           : "androidx.fragment:fragment:$fragment_version",
+            fragmentKtx        : "androidx.fragment:fragment-ktx:$fragment_version",
+            pagingRuntime      : "androidx.paging:paging-runtime:$paging_version",
+            supportDesign      : "com.android.support:design:$support_design_version",
+            cropper            : "com.theartofdev.edmodo:android-image-cropper:$crop_version",
+            tedPermission      : "gun0912.ted:tedpermission:$ted_permission_version",
+            exifInterface      : "androidx.exifinterface:exifinterface:$exifinterface_version",
+            firestore          : "com.google.firebase:firebase-firestore:$firestore_version",
+            glide              : "com.github.bumptech.glide:glide:$glide_version",
+            glideAnnotation    : "com.github.bumptech.glide:compiler:$glide_version"
+    ]
+
+    presentationTestDependencies = [
+            junit       : "junit:junit:${junit_version}",
+            kotlinJUnit : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            androidJunit: "androidx.test.ext:junit:$android_junit_version",
+            espressoCore: "androidx.test.espresso:espresso-core:$espresso_version",
+            roomTest    : "androidx.room:room-testing:$room_version",
+            koinTest    : "org.koin:koin-test:$koin_version",
+            fragmentTest: "androidx.fragment:fragment-testing:$fragment_version",
+            pagingTest : "androidx.paging:paging-common:$paging_version"
+    ]
+
+    baseDependencies =[
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appcompat       : "androidx.appcompat:appcompat:$appcompat_version",
+            coreKtx         : "androidx.core:core-ktx:$core_ktx_version",
+            recyclerview    : "androidx.recyclerview:recyclerview:$recyclerview_version",
+            gms_play_service: "com.google.android.gms:play-services-base:$gms_play_service_version",
+            rxAndroid       : "io.reactivex.rxjava2:rxandroid:$rxandroid_version",
+            rxJava          : "io.reactivex.rxjava2:rxjava:$rxjava_version",
+            koinCore        : "org.koin:koin-core:$koin_version",
+            koinScope       : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt         : "org.koin:koin-androidx-ext:$koin_version",
+            timber          : "com.jakewharton.timber:timber:$timber_version",
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            livedataKTX     : "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_ktx_version"
+    ]
+
+    domainDependencies = [
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            coreKtx         : "androidx.core:core-ktx:$core_ktx_version",
+            koinCore        : "org.koin:koin-core:$koin_version",
+            koinScope       : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt         : "org.koin:koin-androidx-ext:$koin_version",
+            pagingRuntime   : "androidx.paging:paging-runtime:$paging_version"
+    ]
+
+    cacheDependencies=[
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            coreKtx         : "androidx.core:core-ktx:$core_ktx_version",
+            koinCore        : "org.koin:koin-core:$koin_version",
+            koinScope       : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt         : "org.koin:koin-androidx-ext:$koin_version",
+            roomRuntime     : "androidx.room:room-runtime:$room_version",
+            roomKapt        : "androidx.room:room-compiler:$room_version",
+            roomKtx         : "androidx.room:room-ktx:$room_version",
+            roomGuava       : "androidx.room:room-guava:$room_version",
+            pagingRuntime :"androidx.paging:paging-runtime:$paging_version"
+    ]
+    chacheTestDependencies=[
+            junit       : "junit:junit:${junit_version}",
+            kotlinJUnit : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            androidJunit: "androidx.test.ext:junit:$android_junit_version",
+            espressoCore: "androidx.test.espresso:espresso-core:$espresso_version",
+            roomTest    : "androidx.room:room-testing:$room_version",
+            koinTest    : "org.koin:koin-test:$koin_version"
+    ]
+
+    remoteDipendencies = [
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            coroutinePlayService: "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$play_service_croutine_version",
+            coreKtx         : "androidx.core:core-ktx:$core_ktx_version",
+            firestore       : "com.google.firebase:firebase-firestore:$firestore_version",
+            firestoreKtx    : "com.google.firebase:firebase-firestore-ktx:$firestore_version",
+            firestorage     : "com.google.firebase:firebase-storage:$firestorage_version",
+            firestorageKtx  : "com.google.firebase:firebase-storage-ktx:$firestorage_version",
+            koinCore        : "org.koin:koin-core:$koin_version",
+            koinScope       : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt         : "org.koin:koin-androidx-ext:$koin_version"
+    ]
+
+    remoteTestDipendencies= [
+            junit      : "junit:junit:${junit_version}",
+            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            roomTest   : "androidx.room:room-testing:$room_version",
+            koinTest   : "org.koin:koin-test:$koin_version"
+    ]
+
+    dataDependencies=[
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appcompat       : "androidx.appcompat:appcompat:$appcompat_version",
+            coreKtx         : "androidx.core:core-ktx:$core_ktx_version",
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$android_coroutine_version",
+            koinCore        : "org.koin:koin-core:$koin_version",
+            koinScope       : "org.koin:koin-androidx-scope:$koin_version",
+            koinExt         : "org.koin:koin-androidx-ext:$koin_version",
+            pagingRuntime :"androidx.paging:paging-runtime:$paging_version"
+    ]
+    dataTestDependencies=[
+            junit      : "junit:junit:${junit_version}",
+            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            pagingTest : "androidx.paging:paging-common:$paging_version"
+    ]
+
+}

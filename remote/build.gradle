@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def remoteDependencies = rootProject.ext.remoteDipendencies
+    def remoteTestDependencies = rootProject.ext.remoteTestDipendencies
+
+    implementation remoteDependencies.kotlin
+    implementation remoteDependencies.coroutineAndroid
+    implementation remoteDependencies.coroutinePlayService
+    implementation remoteDependencies.coreKtx
+
+    implementation remoteDependencies.koinCore
+    implementation remoteDependencies.koinScope
+    implementation remoteDependencies.koinExt
+
+    implementation remoteDependencies.firestore
+    implementation remoteDependencies.firestoreKtx
+    implementation remoteDependencies.firestorage
+    implementation remoteDependencies.firestorageKtx
+
+    implementation remoteTestDependencies.junit
+    implementation remoteTestDependencies.kotlinJUnit
+    implementation remoteTestDependencies.roomTest
+    implementation remoteTestDependencies.koinTest
+
+    implementation project(path: ':base')
+    implementation project(path: ':data')
+}

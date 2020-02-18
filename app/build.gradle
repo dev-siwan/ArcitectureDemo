@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    configurations.all {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    def appDependencies = rootProject.ext.appDependencies
+    def appTestDependencies = rootProject.ext.appTestDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation appDependencies.kotlin
+    implementation appDependencies.appcompat
+    implementation appDependencies.meterialDesign
+    implementation appDependencies.costraintLayout
+    implementation appDependencies.recyclerview
+    implementation appDependencies.lifeCycleExtensions
+    implementation appDependencies.viewModelKtx
+    implementation appDependencies.gms_play_service
+    implementation appDependencies.rxAndroid
+    implementation appDependencies.rxJava
+    implementation appDependencies.koinCore
+    implementation appDependencies.koinScope
+    implementation appDependencies.koinExt
+    implementation appDependencies.timber
+    implementation appDependencies.coroutineAndroid
+    implementation appDependencies.livedataKTX
+    kapt appDependencies.roomKapt
+    implementation appDependencies.roomKtx
+    implementation appDependencies.roomGuava
+
+
+
+    testImplementation appTestDependencies.junit
+    testImplementation appTestDependencies.kotlinJUnit
+    androidTestImplementation appTestDependencies.espressoCore
+    androidTestImplementation appTestDependencies.androidJunit
+    testImplementation appTestDependencies.roomTest
+    testImplementation appTestDependencies.koinTest
+
+    implementation project(path: ':base')
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+    implementation project(path: ':remote')
+    implementation project(path: ':cache')
+    implementation project(path: ':presentation')
+}
