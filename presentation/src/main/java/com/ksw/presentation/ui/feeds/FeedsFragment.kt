@@ -65,6 +65,7 @@ class FeedsFragment :
                 deleteResult.observe(viewLifecycleOwner, Observer {
                     if(it){
                         setUpSnackBar(getString(R.string.delete_feed_success))
+                        this.refresh()
                     }else{
                         setUpSnackBar(getString(R.string.delete_feed_error))
                     }
