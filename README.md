@@ -2,7 +2,14 @@
 ## 프로젝트 소개
 
  간단하게 Feed(게시물)을 CRUD하는 프로젝트 입니다.
- Android Jecpack Component를 이용하였으며, 각각의 PresnterLayer, DataLayer, DomainLayer를 모듈로 나눠 UI와 Data를 독립적인 구조를 적용하였습니다.
+ 
+ 
+ 
+Android Jecpack Component를 이용하였으며, 각각의 PresnterLayer, DataLayer, DomainLayer를 모듈로 나눠 UI와 Data를 독립적인 구조를 적용하였습니다.
+
+
+
+Remote는 데이터는 Firestore와 이미지는 Firestorage를 이용하였습니다.
 <br></br>
  ## 프로젝트 모듈 도식화
 ![Alt text](https://github.com/DeveloperKimsiwan/ArcitectureDemo/blob/master/img/DemoArchitecture.png?raw=true)
