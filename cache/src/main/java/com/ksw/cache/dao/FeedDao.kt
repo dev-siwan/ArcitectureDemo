@@ -18,12 +18,6 @@ interface FeedDao : BaseDao<FeedEntity> {
     @Query("SELECT * FROM FeedEntity WHERE fId = :id")
     override fun select(id: String): FeedEntity
 
-    @Query("DELETE FROM FeedEntity")
-    fun deleteFeedTable()
-
-    @Query("SELECT * FROM FeedEntity WHERE updateTime BETWEEN :minDate AND :maxDate")
-    fun getRange(minDate: Date, maxDate: Date):List<FeedEntity>
-
     @Transaction
     fun replaceList(dataList: List<FeedEntity>) {
 
